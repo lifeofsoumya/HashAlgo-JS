@@ -15,7 +15,7 @@ function convert() {
         let EncryptText = String.fromCharCode(outSign); // convert outSign number to respective string value from ascii
         output.push(EncryptText);  // pushes each ascii as an array element
     }
-    outputStr = output.join('-') // converts the output array into a string, ('') joins the array elements converts to a single word
+    outputStr = output.join('') // converts the output array into a string, ('') joins the array elements converts to a single word
 
     document.querySelector('#output-hash').innerHTML = outputStr; // prints the output encrypted word
 }
