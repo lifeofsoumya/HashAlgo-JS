@@ -18,18 +18,34 @@
         .result {
             border: 2px solid red;
             border-radius: 5px;
+            width: 350px;
+            margin: 10px;
+            padding: 15px;
         }
+
     </style>
 </head>
 
 <body>
 
+    <!-- This potion contains Input to receive hash-able text and salting number -->
     <input type="text" id="input-word" />
     <input type="number" id="salt-input" min="1" max="25" />
     <button onclick="convert();">Convert!</button>
 
-    <div class="result">
+    <!-- Bottom div contains result after hashing -->
+    <div class="result"> 
         <p id="output-hash"></p>
+    </div>
+
+    <!-- This potion is used to decrypt the data -->
+    <input type="text" id="input-word" />
+    <input type="number" id="salt-input" min="1" max="25" />
+    <button onclick="convert();">Convert!</button>
+
+    <!-- Bottom div contains result after decryption -->
+    <div class="result"> 
+        <p id="output-rev"></p>
     </div>
 
 <script src="/script.js"></script>

@@ -14,3 +14,8 @@ function convert() {
     
     document.querySelector('#output-hash').innerHTML = output;
 }
+
+
+function reverse(){
+    var salt = document.getElementById("salt-rev").value;
+}
