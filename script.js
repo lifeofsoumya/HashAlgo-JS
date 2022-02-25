@@ -12,7 +12,7 @@ function convert() {
         var outSign = inpArr[i].charCodeAt(0) + salt; // converts input to ASCII and adds salt no to the ascii
         output.push(outSign); // pushes each ascii as an array element
     }
-    outputStr = output.join() // converts the output array into a string
+    outputStr = output.join('') // converts the output array into a string, ('') joins the array elements converts to a single word
 
     document.querySelector('#output-hash').innerHTML = outputStr; // prints the output encrypted word
 }
