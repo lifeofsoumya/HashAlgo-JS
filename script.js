@@ -9,15 +9,22 @@ function convert() {
     var output = [] // output is a new blank array
 
     for (i = 0; i < inpArr.length; i++) { // runs loop with input word array one by one character
-        var outSign = inpArr[i].charCodeAt(0) + salt; // converts input to ASCII and adds salt no to the ascii
-        output.push(outSign); // pushes each ascii as an array element
+        var conV = inpArr[i].charCodeAt(0); // converts input to ASCII
+        var outSign = parseInt(conV) + parseInt (salt) // adds salt no to the ascii
+
+        let EncryptText = String.fromCharCode(outSign); // convert outSign number to respective string value from ascii
+        output.push(EncryptText);  // pushes each ascii as an array element
     }
-    outputStr = output.join('') // converts the output array into a string, ('') joins the array elements converts to a single word
+    outputStr = output.join('-') // converts the output array into a string, ('') joins the array elements converts to a single word
 
     document.querySelector('#output-hash').innerHTML = outputStr; // prints the output encrypted word
 }
 
 
 function reverse(){
-    var salt = document.getElementById("salt-rev").value;
+    const inputRev = document.getElementById("input-rev").value;
+    const saltRev = document.getElementById("salt-rev").value;
+
+    var revArr = inputRev.split('');
+
 }
