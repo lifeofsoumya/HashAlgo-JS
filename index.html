@@ -30,7 +30,7 @@
 
     <!-- This potion contains Input to receive hash-able text and salting number -->
     <input placeholder="To be Encrypted" type="text" id="input-word" onkeypress="return event.charCode != 32"/>
-    <input placeholder="Salt no" type="number" id="salt-input" min="1" max="25" />
+    <input placeholder="Salt no" type="number" id="salt-input" min="1" max="7" />
     <button onclick="convert();">Convert!</button>
 
     <!-- Bottom div contains result after hashing -->
@@ -40,7 +40,7 @@
 
     <!-- This potion is used to decrypt the data -->
     <input placeholder="To be Decrypted" type="text" id="input-rev" onkeypress="return event.charCode != 32" />
-    <input placeholder="Salt no" type="number" id="salt-input" min="1" max="25" />
+    <input placeholder="Salt no" type="number" id="salt-input" min="1" max="7" />
     <button onclick="convert();">Convert!</button>
 
     <!-- Bottom div contains result after decryption -->
