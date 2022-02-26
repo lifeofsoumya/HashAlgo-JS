@@ -36,6 +36,7 @@
 
         .container {
             display: inline-block;
+            text-align:center;
         }
     </style>
 </head>
@@ -44,7 +45,7 @@
     <div class="container">
         <!-- This potion contains Input to receive hash-able text and salting number -->
         <input placeholder="To be Encrypted" type="text" id="input-word" />
-        <input class="salt-no" placeholder="Salt no" type="number" id="salt-input" min="1" max="5" required />
+        <input class="salt-no" placeholder="Salt no" type="number" id="salt-input" min="1" max="5" required>
         <button onclick="convert();">Convert!</button>
 
         <!-- Bottom div contains result after hashing -->
@@ -53,8 +54,8 @@
         </div>
 
         <!-- This potion is used to decrypt the data -->
-        <input placeholder="To be Decrypted" type="text" id="input-rev" onkeypress="return event.charCode != 32" />
-        <input class="salt-no" placeholder="Salt no" type="number" id="salt-rev" min="1" max="5" />
+        <input placeholder="To be Decrypted" type="text" id="input-rev" />
+        <input class="salt-no" placeholder="Salt no" type="number" id="salt-rev" min="1" max="5" required>
         <button onclick="reverse();">Convert!</button>
 
         <!-- Bottom div contains result after decryption -->
