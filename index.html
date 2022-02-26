@@ -15,40 +15,55 @@
             border-radius: 5px;
         }
 
+        .salt-no {
+            width: 70px;
+        }
+
         .result {
-            border: 2px solid red;
+            border: 2px solid #f2c500;
             border-radius: 5px;
-            width: 350px;
+            max-width: 650px;
             margin: 10px;
             padding: 15px;
         }
 
+        button {
+            padding: 6px 10px;
+            border: 2px solid black;
+            background-color: #f2c500;
+            border-radius: 6px;
+        }
+
+        .container {
+            display: inline-block;
+        }
     </style>
 </head>
 
 <body>
+    <div class="container">
+        <!-- This potion contains Input to receive hash-able text and salting number -->
+        <input placeholder="To be Encrypted" type="text" id="input-word" />
+        <input class="salt-no" placeholder="Salt no" type="number" id="salt-input" min="1" max="5" required />
+        <button onclick="convert();">Convert!</button>
 
-    <!-- This potion contains Input to receive hash-able text and salting number -->
-    <input placeholder="To be Encrypted" type="text" id="input-word" onkeypress="return event.charCode != 32"/>
-    <input placeholder="Salt no" type="number" id="salt-input" min="1" max="5" />
-    <button onclick="convert();">Convert!</button>
+        <!-- Bottom div contains result after hashing -->
+        <div class="result">
+            <p id="output-hash"></p>
+        </div>
 
-    <!-- Bottom div contains result after hashing -->
-    <div class="result"> 
-        <p id="output-hash"></p>
+        <!-- This potion is used to decrypt the data -->
+        <input placeholder="To be Decrypted" type="text" id="input-rev" onkeypress="return event.charCode != 32" />
+        <input class="salt-no" placeholder="Salt no" type="number" id="salt-rev" min="1" max="5" />
+        <button onclick="reverse();">Convert!</button>
+
+        <!-- Bottom div contains result after decryption -->
+        <div class="result">
+            <p id="output-rev"></p>
+        </div>
     </div>
 
-    <!-- This potion is used to decrypt the data -->
-    <input placeholder="To be Decrypted" type="text" id="input-rev" onkeypress="return event.charCode != 32" />
-    <input placeholder="Salt no" type="number" id="salt-rev" min="1" max="5" />
-    <button onclick="reverse();">Convert!</button>
-
-    <!-- Bottom div contains result after decryption -->
-    <div class="result"> 
-        <p id="output-rev"></p>
-    </div>
-
-<script src="/script.js"></script>
+    <script src="/script.js"></script>
 </body>
 
 </html>
