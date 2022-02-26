@@ -26,5 +26,17 @@ function reverse(){
     const saltRev = document.getElementById("salt-rev").value;
 
     var revArr = inputRev.split('');
+    console.log('split done')
+    var revOutput = []
 
+    for (j = 0; j < revArr.length; j++) { // runs loop with reverse input word array one by one character
+        var revConV = revArr[j].charCodeAt(0);
+        var revOutSign = parseInt(revConV) - parseInt(saltRev); // minuses the salt added while encryption
+        console.log('minus done') 
+        let decryptText = String.fromCharCode(revOutSign); // converts the ascii to text
+        revOutput.push(decryptText) // pushes final output to an array
+    }
+    revOutputStr = revOutput.join('') 
+    console.log('output done')
+    document.querySelector('#output-rev').innerHTML = revOutputStr; // shows the decrypted text
 }
