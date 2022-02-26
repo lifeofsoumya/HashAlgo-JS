@@ -16,8 +16,12 @@ function convert() {
         output.push(EncryptText);  // pushes each ascii as an array element
     }
     outputStr = output.join('') // converts the output array into a string, ('') joins the array elements converts to a single word
+    console.log(outputStr)
+    console.log(typeof outputStr)
 
-    document.querySelector('#output-hash').innerHTML = outputStr; // prints the output encrypted word
+    const bConvert = window.btoa(outputStr); // convert output to base64
+
+    document.querySelector('#output-hash').innerHTML = bConvert; // prints the output encrypted word
 }
 
 
@@ -25,7 +29,9 @@ function reverse(){
     const inputRev = document.getElementById("input-rev").value;
     const saltRev = document.getElementById("salt-rev").value;
 
-    var revArr = inputRev.split('');
+    const bReverse = window.atob(inputRev); // reverse first from base64 to text salted
+
+    var revArr = bReverse.split('');
     var revOutput = []
 
     for (j = 0; j < revArr.length; j++) { // runs loop with reverse input word array one by one character
@@ -35,5 +41,9 @@ function reverse(){
         revOutput.push(decryptText) // pushes final output to an array
     }
     revOutputStr = revOutput.join('') 
+    console.log(revOutputStr)
+    console.log(typeof revOutputStr)
+
+
     document.querySelector('#output-rev').innerHTML = revOutputStr; // shows the decrypted text
 }
