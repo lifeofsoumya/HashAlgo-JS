@@ -1,12 +1,13 @@
 function convert() {
     // const signature = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', 0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
-
     const input = document.getElementById("input-word").value;
     const salt = document.getElementById("salt-input").value;
 
     var inpArr = input.split(''); // converts input to an array, stores into inpArr
 
     var output = [] // output is a new blank array
+
+    
 
     for (i = 0; i < inpArr.length; i++) { // runs loop with input word array one by one character
         var conV = inpArr[i].charCodeAt(0); // converts input to ASCII
@@ -22,6 +23,10 @@ function convert() {
     const bConvert = window.btoa(outputStr); // convert output to base64
 
     document.querySelector('#output-hash').innerHTML = bConvert; // prints the output encrypted word
+
+    if (salt<1){
+        document.querySelector('#output-hash').innerText = "Please add a salt number 1 to 5"
+    }
 }
 
 
@@ -44,6 +49,9 @@ function reverse(){
     console.log(revOutputStr)
     console.log(typeof revOutputStr)
 
-
     document.querySelector('#output-rev').innerHTML = revOutputStr; // shows the decrypted text
+
+    if (saltRev<1){
+        document.querySelector('#output-rev').innerText = "Please add a salt number 1 to 5"
+    }
 }
