@@ -4,12 +4,12 @@ This program uses custom programmed Algorithm which you can modify with Javascri
 
 ## Encryption Guide
 - Input your Text or Passcode into the Encrypt input box
-- Choose a salting number
+- Choose a Password/ Key number
 - Click on Convert
 
 ## Decryption Guide
 - Input your encrypted result text into the Decrypt box
-- Enter previous salt no while decrypting
+- Enter previous Key no while decrypting
 - Click on Convert
 
 

@@ -25,7 +25,7 @@ function convert() {
     document.querySelector('#output-hash').innerHTML = bConvert; // prints the output encrypted word
 
     if (salt<1){
-        document.querySelector('#output-hash').innerText = "Please add a salt number 1 to 5"
+        document.querySelector('#output-hash').innerText = "Please add a Key number 1 to 5"
     }
 }
 
@@ -52,6 +52,6 @@ function reverse(){
     document.querySelector('#output-rev').innerHTML = revOutputStr; // shows the decrypted text
 
     if (saltRev<1){
-        document.querySelector('#output-rev').innerText = "Please add a salt number 1 to 5"
+        document.querySelector('#output-rev').innerText = "Please add a Key number 1 to 5"
     }
 }

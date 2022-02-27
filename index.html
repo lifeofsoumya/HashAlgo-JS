@@ -62,7 +62,7 @@
             <h2>Encrypt</h2>
         </span>
         <input placeholder="To be Encrypted" type="text" id="input-word" />
-        <input class="salt-no" placeholder="Salt no" type="number" id="salt-input" min="1" max="5" required>
+        <input class="salt-no" placeholder="Key" type="number" id="salt-input" min="1" max="5" required>
         <button onclick="convert();">Convert!</button>
 
         <!-- Bottom div contains result after hashing -->
@@ -81,7 +81,7 @@
             <h2>Decrypt</h2>
         </span>
         <input placeholder="To be Decrypted" type="text" id="input-rev" />
-        <input class="salt-no" placeholder="Salt no" type="number" id="salt-rev" min="1" max="5" required>
+        <input class="salt-no" placeholder="Key" type="number" id="salt-rev" min="1" max="5" required>
         <button onclick="reverse();">Convert!</button>
 
         <!-- Bottom div contains result after decryption -->
